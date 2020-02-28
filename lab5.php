@@ -52,82 +52,37 @@
     </div>
 
     <div class="container-fluid mt-3">
-        <h3 class="text-white p-3 shadow">Aralia</h3>
-        <div class="row mb-3">
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card mt-3 mb-3 shadow">
-                    <div class="card-header align-leff">
-                        <a href="https://www.google.com/maps/search/?api=1&query=45.63472,-122.6500">Castor Aralia
-                        </a>
-                    </div>
-                    <img class="card-img-top" src="img/trees/castor_aralia.jpg" alt="Kalopanax pictus">
-                    <div class="card-body">
-                        <p class="card-text"><strong>Common Genus:</strong> Aralia<br>
-                            <strong>Botanical Name:</strong> <em>Kalopanax pictus</em></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php 
+        if (isset($_GET["aralia"])) {
+            if ($_GET["aralia"] == "yes") {
+                include 'includes/aralia.html';
+            }
+        } else {
+            include 'includes/aralia.html';
+        }
+        ?>
+    
+    <?php 
+        if (isset($_GET["arborvitae"])) {
+            if ($_GET["arborvitae"] == "yes") {
+                include 'includes/arborvitae.html';
+            }
+        } else {
+            include 'includes/arborvitae.html';
+        }
+        ?>
+        
+    <?php 
+        if (isset($_GET["ash"])) {
+            if ($_GET["ash"] == "yes") {
+                include 'includes/ash.html';
+            }
+        } else {
+            include 'includes/ash.html';
+        }
+        ?>
 
-        <h3 class="p-3 shadow">Arborvitae</h3>
-        <div class="row mb-3">
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card mt-3 mb-3 shadow">
-                    <div class="card-header shadow">
-                        <a href="https://www.google.com/maps/search/?api=1&query=45.63472,-122.65247">American
-                            Arborvitae</a>
-                    </div>
-                    <img class="card-img-top" src="img/trees/evergreen48.jpg" alt="occidentalis">
-                    <div class="card-body">
-                        <p class="card-text"><strong>Common Genus:</strong> Arborvitae<br>
-                            <strong>Botanical Name:</strong> <em>occidentalis</em></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <h3 class="p-3 shadow">Ash</h3>
-        <div class="row mb-3">
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card mt-3 mb-3 shadow">
-                    <div class="card-header shadow">
-                        <a href="https://www.google.com/maps/search/?api=1&query=45.635857,-122.652392">Rose Hill Ash</a>
-                    </div>
-                    <img class="card-img-top" src="img/trees/deciduous33.jpg" alt="americana">
-                    <div class="card-body">
-                        <p class="card-text"><strong>Common Genus:</strong> Ash<br>
-                            <strong>Botanical Name:</strong> <em>americana</em></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card mt-3 mb-3 shadow">
-                    <div class="card-header shadow">
-                        <a href="https://www.google.com/maps/search/?api=1&query=45.63591,-122.65031">Raywood Ash</a>
-                    </div>
-                    <img class="card-img-top" src="img/trees/deciduous34.jpg" alt="angustifolia">
-                    <div class="card-body">
-                        <p class="card-text"><strong>Common Genus:</strong> Ash<br>
-                            <strong>Botanical Name:</strong> <em>angustifolia</em></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card mt-3 mb-3 shadow">
-                    <div class="card-header shadow">
-                        <a href="https://www.google.com/maps/search/?api=1&query=45.635541,-122.649899">Oregon Ash</a>
-                    </div>
-                    <img class="card-img-top" src="img/trees/deciduous35.jpg" alt="latifolia">
-                    <div class="card-body">
-                        <p class="card-text"><strong>Common Genus:</strong> Ash<br>
-                            <strong>Botanical Name:</strong> ∏<em>latifolia</em></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-</div>
+    </div>
 
 <!-- jQuery -->
 <script src="js/jquery-3.3.1.min.js"></script>
